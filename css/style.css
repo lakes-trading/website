@@ -1,0 +1,629 @@
+:root {
+    --dark-blue: #123f60;
+    --deep-blue: #092d48;
+    --main-blue: #0795c5;
+    --turquoise: #18b6c9;
+
+    --light-blue: #e8f6fa;
+    --very-light-blue: #f4fafc;
+
+    --text-color: #536c7c;
+    --white: #ffffff;
+    --border-color: #d4e7ee;
+
+    --shadow: 0 8px 25px rgba(9, 45, 72, 0.10);
+}
+
+
+/* Grundeinstellungen */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--dark-blue);
+    background: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h1,
+h2 {
+    max-width: 820px;
+    margin-bottom: 28px;
+    font-size: clamp(31px, 4vw, 50px);
+    line-height: 1.12;
+}
+
+h3 {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+
+/* Header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 12px rgba(9, 45, 72, 0.05);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1180px;
+    min-height: 82px;
+    margin: 0 auto;
+    padding: 12px 30px;
+}
+
+
+/* Logo */
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    padding: 7px;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 13px rgba(9, 45, 72, 0.12);
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+    letter-spacing: 1.8px;
+}
+
+.brand-name strong {
+    color: var(--dark-blue);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.brand-name small {
+    margin-top: 5px;
+    color: var(--main-blue);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* Navigation */
+.main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.main-navigation a {
+    color: var(--dark-blue);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.main-navigation a:hover {
+    color: var(--main-blue);
+}
+
+
+/* Hero */
+.hero-section {
+    position: relative;
+    min-height: 630px;
+    color: var(--white);
+    background:
+        linear-gradient(
+            110deg,
+            rgba(9, 45, 72, 0.96),
+            rgba(7, 149, 197, 0.73)
+        ),
+        url("../Bilder/containerschiff.jpg") center / cover no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 140px 30px 145px;
+}
+
+
+.hero-label,
+.section-label {
+    margin-bottom: 15px;
+    color: var(--main-blue);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-label {
+    color: #b8edf7;
+}
+
+.hero-section h1 {
+    max-width: 850px;
+    margin-bottom: 28px;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.05;
+}
+
+.hero-section h1 span {
+    display: block;
+    color: #b8edf7;
+}
+
+.hero-text {
+    max-width: 720px;
+    margin-bottom: 37px;
+    color: #e9f9fc;
+    font-size: 20px;
+}
+
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.button-primary {
+    color: var(--white);
+    background: var(--main-blue);
+}
+
+.button-primary:hover {
+    background: var(--turquoise);
+}
+
+.button-outline {
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.button-outline:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.button-light {
+    color: var(--dark-blue);
+    background: var(--white);
+}
+
+.button-light:hover {
+    color: var(--white);
+    background: var(--main-blue);
+}
+
+
+/* Einleitung */
+.intro-section {
+    padding: 95px 30px;
+    background: var(--white);
+}
+
+.narrow-content {
+    max-width: 830px;
+    margin: 0 auto;
+}
+
+.narrow-content p:not(.section-label) {
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+
+/* Bilderbereich */
+.offers-section {
+    padding: 95px 30px;
+    background: var(--very-light-blue);
+}
+
+.wide-content {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 48px;
+}
+
+.image-card {
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(9, 45, 72, 0.17);
+}
+
+.image-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.image-card-content {
+    padding: 24px;
+}
+
+.image-card-content h3 {
+    color: var(--dark-blue);
+}
+
+.image-card-content p {
+    min-height: 52px;
+    margin-bottom: 18px;
+    color: var(--text-color);
+}
+
+.image-card-content a {
+    color: var(--main-blue);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.image-card-content a:hover {
+    color: var(--dark-blue);
+}
+
+
+/* Anfragebereich */
+.highlight-section {
+    padding: 78px 30px;
+    color: var(--white);
+    background: linear-gradient(
+        110deg,
+        var(--dark-blue),
+        var(--main-blue)
+    );
+}
+
+.highlight-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.highlight-content h2 {
+    margin-bottom: 18px;
+}
+
+.highlight-content p:not(.section-label) {
+    max-width: 700px;
+    margin-bottom: 0;
+    color: #e4f6fa;
+    font-size: 18px;
+}
+
+.light-label {
+    color: #b8edf7;
+}
+
+
+/* Ablauf */
+.process-section {
+    padding: 95px 30px;
+    background: var(--white);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 27px;
+    margin-top: 48px;
+}
+
+.process-step span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 18px;
+    color: var(--white);
+    background: var(--main-blue);
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.process-step p {
+    margin-bottom: 0;
+    color: var(--text-color);
+}
+
+
+/* Über uns */
+.about-section {
+    padding: 95px 30px;
+    background: var(--light-blue);
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border: 7px solid var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.about-text p:not(.section-label) {
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+
+/* Kontakt */
+.contact-section {
+    padding: 100px 30px;
+    color: var(--white);
+    background: linear-gradient(
+        110deg,
+        var(--deep-blue),
+        #087c9d
+    );
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h2 {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contact-content p:not(.section-label) {
+    color: #e4f6fa;
+    font-size: 18px;
+}
+
+.contact-details {
+    margin: 30px 0;
+}
+
+.contact-details p {
+    margin-bottom: 5px;
+    font-size: 16px !important;
+}
+
+
+/* Footer */
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 25px 30px;
+    color: #d9edf3;
+    background: var(--deep-blue);
+    font-size: 14px;
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #d9edf3;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--turquoise);
+}
+
+
+/* Tablet */
+@media (max-width: 950px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .image-grid,
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .highlight-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+
+/* Smartphone */
+@media (max-width: 600px) {
+    .header-inner {
+        padding: 14px 18px;
+    }
+
+    .brand-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand-name strong {
+        font-size: 15px;
+    }
+
+    .brand-name small {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .main-navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 11px 17px;
+    }
+
+    .main-navigation a {
+        font-size: 13px;
+    }
+
+    .hero-section {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 95px 20px 95px;
+    }
+
+    .intro-section,
+    .offers-section,
+    .process-section,
+    .about-section,
+    .contact-section {
+        padding: 68px 20px;
+    }
+
+    .highlight-section {
+        padding: 65px 20px;
+    }
+
+    .image-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .button {
+        text-align: center;
+    }
+
+    .about-image img {
+        height: 270px;
+    }
+
+    .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 25px 20px;
+    }
+}
